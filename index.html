@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krispy Kreme Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <a href="#" class="logo"><img src="logo.png" /></a>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">What's New</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>Krispy Kreme,<span> Hot Now & Anytime!</span></h2>
+          <p>
+            Our delicious doughnuts are hand-crafted to perfection. Dipped,
+            filled, dusted or powdered, there’s a sweet treat for everyone! Or
+            take your pick and try our simply irresistible hot beverages or
+            chillers.
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="imgBox"><img src="glazed.jpg" class="krispykreme" /></div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="glazed.jpg"
+            oneclick="imgSlider('img1.jpg');changeCircleColor('green')"
+          />
+        </li>
+        <li>
+          <img
+            src="donuts.jpg"
+            oneclick="imgSlider('img2.jpg');changeCircleColor('brown')"
+          />
+        </li>
+        <li>
+          <img
+            src="assorted.jpg"
+            oneclick="imgSlider('img3.jpg');changeCircleColor('green')"
+          />
+        </li>
+      </ul>
+      <ul class="sci">
+        <i data-feather="facebook"></i>
+        <i data-feather="twitter"></i>
+        <i data-feather="instagram"></i>
+      </ul>
+    </section>
+    <script>
+      feather.replace();
+    </script>
+    <script type="text/javascript">
+      function imgSlider(anything) {
+        document.querySelector('.krispykreme').src = anything;
+      }
+
+      function changeCircleColor(color) {
+        const circle = document.querySelector('.circle');
+        circle.style.background = color;
+      }
+    </script>
+  </body>
+</html>
